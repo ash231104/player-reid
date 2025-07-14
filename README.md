@@ -67,10 +67,10 @@ A Jupyter Notebook to preview matches inline.
 
 2. ```detect_players("15sec_input_720p.mp4", "crops/input720p", model_path="best.pt", video_label="input720p")```
 
-3. ```from detect_players import detect_players
+3. ```from detect_players import detect_players```
 
-if __name__ == "__main__":
-    detect_players("15sec_input_720p.mp4", "crops/input720p", model_path="best.pt", video_label="input720p")```
+```if __name__ == "__main__":```
+    ````detect_players("15sec_input_720p.mp4", "crops/input720p", model_path="best.pt", video_label="input720p")```
 
 4. ```python scripts/test_input720p.py```
 5. ```extract_features("crops/input720p", "features/input720p.npz")```
@@ -88,12 +88,12 @@ if __name__ == "__main__":
 🧰 Requirements
 Install the required Python packages:
 
-bash::
+bash:
 ```pip install ultralytics torch torchvision opencv-python scikit-learn matplotlib ```
 Also ensure you have Python 3.8+ and a working virtual environment if possible.
 
 ## 📁 Project Structure
- bash::
+ bash:
 ```player-reid/
 ├── best.pt
 ├── broadcast.mp4
@@ -114,15 +114,14 @@ Also ensure you have Python 3.8+ and a working virtual environment if possible.
 │   ├── match_players.py
 │   └── visualize_matches.py
 ├── view_matches.ipynb           # Optional Jupyter preview
-└── README.md```
+└── README.md
+```
 
-## 👤 Author 
+## 👤 Author  
 Ashlesha Verma
 
 
-## 📬 Notes
-The model best.pt is a fine-tuned YOLOv11 model trained on soccer player & ball detection.
-
-ResNet50 was used without its classification head to obtain deep feature embeddings.
-
-Matching relies purely on visual similarity (no tracking/temporal modeling used).
+## 📌 Notes  
+- The model `best.pt` is a fine-tuned YOLOv11 model trained on soccer player & ball detection.  
+- `ResNet50` was used without its classification head to obtain deep feature embeddings.  
+- Matching relies purely on **visual similarity** (no tracking or temporal modeling used).
