@@ -29,28 +29,25 @@ Given two video clips (`broadcast.mp4` and `tacticam.mp4`) of the same soccer ma
 ### 1. Player Detection
 Detect players in each video and save cropped images:
 
-***bash:***
-python scripts/detect_players.py
+''' bash
+python scripts/detect_players.py '''
 
 ### 2. Feature Extraction
 Extract appearance features from each crop using ResNet50:
 
-# ***bash:***
-Copy code
-python scripts/extract_features.py
+''' bash
+python scripts/extract_features.py '''
 
 ### 3. Match Players Across Views
 Match tacticam players to broadcast players using cosine similarity:
 
-# ***bash:***
-Copy code
-python scripts/match_players.py
+''' bash
+python scripts/match_players.py '''
 ### 4. Visualize Matched Players
 Save side-by-side image comparisons for visual inspection:
 
-# ***bash:***
-Copy code
-python scripts/visualize_matches.py
+''' bash
+python scripts/visualize_matches.py '''
 
 
 ## 🧪 Output
@@ -64,7 +61,7 @@ Side-by-side images showing the matched players from both views.
 A Jupyter Notebook to preview matches inline.
 
 ## Testing 
-# ***bash:***
+''' bash
 1. mkdir crops\input720p
 
 2. detect_players("15sec_input_720p.mp4", "crops/input720p", model_path="best.pt", video_label="input720p")
@@ -82,7 +79,7 @@ if __name__ == "__main__":
     tacticam_dir="crops/input720p",
     matches_file="results/matches_input720p.json",
     output_dir="results/match_visuals_input720p"
-)
+)'''
 
 
 
@@ -90,14 +87,12 @@ if __name__ == "__main__":
 🧰 Requirements
 Install the required Python packages:
 
-# ***bash:***
-Copy code
-pip install ultralytics torch torchvision opencv-python scikit-learn matplotlib
+''' bash:
+pip install ultralytics torch torchvision opencv-python scikit-learn matplotlib '''
 Also ensure you have Python 3.8+ and a working virtual environment if possible.
 
 ## 📁 Project Structure
-***bash:***
-Copy code
+''' bash:
 player-reid/
 ├── best.pt
 ├── broadcast.mp4
@@ -119,7 +114,7 @@ player-reid/
 │   └── visualize_matches.py
 ├── view_matches.ipynb           # Optional Jupyter preview
 └── README.md
-
+'''
 ## 👤 Author 
 Ashlesha Verma
 
