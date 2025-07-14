@@ -121,7 +121,7 @@ player-reid/
 └── README.md
 
 ## 👤 Author 
-Ashlesha_Verma
+Ashlesha Verma
 
 
 ## 📬 Notes
